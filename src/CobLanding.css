@@ -1,0 +1,31 @@
+.Content-Container{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 33%;
+}
+
+.Left-Bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  padding:1em;
+}
+
+.Image-Container{
+  width: 300px;
+}
+.ToS-Box{
+  overflow-y: scroll;
+  width: 200px;
+  display: inline-block;
+  padding: 1em;
+height: 200px;
+}
+.Image-Container img{
+  width: 100%
+}
+
+.Left-Bar .Image-Container img{
+  border-radius: 50%;
+}

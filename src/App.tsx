@@ -1,11 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Landing from './Landing';
+import CobLanding from './CobLanding';
+import Home from './Home';
+import Routing from './Routing';
+
 function App() {
   return (
     <div className="App">
-      <Landing></Landing>
+      <Routing></Routing>
     </div>
   );
 }
