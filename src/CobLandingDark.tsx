@@ -9,7 +9,10 @@ function CobLandingDark() {
       <header className="App-header">
         Welcome to Cob's
       </header>
-
+      <div className="Clouds">
+        <img className="Left-Cloud" src="clouds.png"/>
+        <img className="Right-Cloud" src="clouds.png"/>
+      </div>
       <div className="Content-Container">
         <div className="Left-Bar">
           <div className="Image-Container">
@@ -27,8 +30,8 @@ function CobLandingDark() {
             <TermsOfService></TermsOfService>
           </div>
           <div className="ToS-Consent">
-            <div><input type="checkbox" defaultChecked={true} /> <label>I agree to the Terms of Service</label></div>
-            <input value="continue" type="button"></input>
+            <div><input type="checkbox" defaultChecked={true} /> <label className="Dark-Checkbox-Label">I agree to the Terms of Service above</label></div>
+            <input value="Start Selecting Some Shoes!" className="Dark-Continue" type="button"></input>
           </div>
         </div>
         <div className="Right-Bar">
