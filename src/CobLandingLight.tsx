@@ -23,8 +23,12 @@ function CobLandingLight() {
             <img src="shoe8.jpg" /></div>
         </div>
         <div className="Main-Content">
+          <h3>PLEASE READ THE TERMS OF SERVICE</h3>
           <div className="ToS-Box-Light">
             <TermsOfService></TermsOfService>
+          </div>
+          <div className="ToS-TLDR">
+            Breif Summary: We have the right to store, track, and distribute your data. We have the right to cancel transactions or terminate your account at anytime.
           </div>
           <div className="ToS-Consent">
             <div><input type="checkbox"/> <label>I agree to the Terms of Service</label></div>
