@@ -1,8 +1,9 @@
 import React from 'react';
 import {Route,BrowserRouter as Router, Routes } from "react-router-dom";
 import logo from './logo.svg';
-import CobLanding from './CobLanding';
+import CobLandingDark from './CobLandingDark';
 import Home from './Home';
+import CobLandingLight from './CobLandingLight';
 
 function Routing() {
   return (
@@ -10,8 +11,8 @@ function Routing() {
   <div>
   <Routes>
     <Route path="/" element={<Home></Home>}/>
-    <Route path="/HW1dark" element={<CobLanding></CobLanding>}/>
-    <Route path="/HW1light" /></Routes>
+    <Route path="/HW1dark" element={<CobLandingDark></CobLandingDark>}/>
+    <Route path="/HW1light" element={<CobLandingLight></CobLandingLight>}/></Routes>
   </div>
   </Router>
   );

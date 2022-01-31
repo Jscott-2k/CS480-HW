@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './CobLanding.css';
 import TermsOfService from './TermsOfService';
 
-function CobLanding() {
+function CobLandingDark() {
   return (
     <>
       <header className="App-header">
@@ -23,7 +23,7 @@ function CobLanding() {
             <img src="shoe8.jpg" /></div>
         </div>
         <div className="Main-Content">
-          <div className="ToS-Box">
+          <div className="ToS-Box-Dark">
             <TermsOfService></TermsOfService>
           </div>
           <div className="ToS-Consent">
@@ -40,4 +40,4 @@ function CobLanding() {
   );
 }
 
-export default CobLanding;
+export default CobLandingDark;
