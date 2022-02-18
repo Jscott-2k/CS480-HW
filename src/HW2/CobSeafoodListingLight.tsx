@@ -41,13 +41,13 @@ class CobSeafoodListingLight extends React.Component<Props, States>{
         return (
             <div className='Listing'>
                 <Card.Group itemsPerRow={3}>
-                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Flounder" imgSrc="/seafood/southernflounder.png" price={30.00}></FoodListItem>
-                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Dover Sole" imgSrc="/seafood/doversole.png" price={35.00}></FoodListItem>
-                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Turbot" imgSrc="/seafood/turbot.png" price={35.00}></FoodListItem>
-                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Giant Squid" imgSrc="/seafood/giantsquid.png" price={8000.00}></FoodListItem>
-                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Great White Shark" imgSrc="/seafood/shark.png" price={5000.00}></FoodListItem>
-                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Barracuda" imgSrc="/seafood/barracuda.png" price={75.00}></FoodListItem>
-                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Crab" imgSrc="/seafood/crab.png" price={30.00}></FoodListItem>
+                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Flounder" imgSrc="/southernflounder.png" price={30.00}></FoodListItem>
+                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Dover Sole" imgSrc="/doversole.png" price={35.00}></FoodListItem>
+                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Turbot" imgSrc="/turbot.png" price={35.00}></FoodListItem>
+                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Giant Squid" imgSrc="/giantsquid.png" price={8000.00}></FoodListItem>
+                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Great White Shark" imgSrc="/shark.png" price={5000.00}></FoodListItem>
+                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Barracuda" imgSrc="/barracuda.png" price={75.00}></FoodListItem>
+                    <FoodListItem cart={this.state.cart} onItemAdd={this.itemAdded} onItemRemove={this.itemRemoved} name="Crab" imgSrc="/crab.png" price={30.00}></FoodListItem>
                 </Card.Group>
             </div>);
     }
