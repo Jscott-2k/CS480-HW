@@ -1,0 +1,110 @@
+.HW2-header{
+  padding: .33em;
+  display: flex;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+
+}
+.HW2-Dark-Background{
+  background-color:midnightblue;
+}
+.HW2-Menubar{
+  width: 100%;
+}
+.HW2-Content-Container{
+  margin: 1em;
+  display: block;
+}
+*{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.HW2-ListingHeader{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  font-weight: bolder;
+ 
+}
+.HW2-Red{color:red}
+.HW2-Review-Link{
+  font-size: large;
+  font-weight: bolder;
+  text-decoration: nonbe;
+}
+.HW2-Content{
+  background-color: lightblue;
+  color:black;
+  border-radius: 5px;
+  padding: 1em;
+  text-align: left;
+  flex-grow: 20%;
+}
+.HW2-Listing{
+  position: sticky;
+  position: -webkit-sticky;
+} 
+.HW2-Center-Text{
+  text-align: center;
+}
+.HW2-Right-Text{
+  text-align: right;
+}
+.HW2-Left-Text{
+  text-align:left;
+}
+.HW2-Content-Main{
+
+
+}
+.HW2-Cart-List{
+  color:white;
+  display: flex;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+.HW2-FlexRow{
+  display: flex;
+  justify-content:center;
+}
+.HW2-Strike{
+  text-decoration:line-through;
+}
+.HW2-Cart-View-Message{
+  position: fixed;
+  bottom: 0;
+  right:2%;
+  z-index: 3;
+}
+.HW2-Cart-Checkout{
+  background-color: lightblue;
+  padding: 1em;
+  color:black;
+}
+.HW2-Cart-Checkout-Steps{
+  background-color: teal;
+  padding: 1em;
+}
+
+.HW2-View-Cart-Toggle{
+  float:right;
+}
+.HW2-Price-Checkout{
+  color:black;
+  font-weight: bolder;
+  display: block;
+}
+
+.HW2-Final-Confirmation-Form{
+  margin:1em;
+}
+
+.HW2-Link{
+  margin:.5em;
+  cursor:pointer;
+}
+.HW2-FitVerticle{
+  height:100vh;
+  min-height: fit-content;
+}

@@ -1,6 +1,17 @@
 .Homework-List{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
+    text-align: left;
     
+}
+.Homework-List a{
+    text-decoration: none;
+    color:aqua;
+}
+.Homework-List a:hover{
+    text-decoration: none;
+    color:blue;
+}
+.Homework{
+    display: flex;
+    justify-content: center;
+
 }

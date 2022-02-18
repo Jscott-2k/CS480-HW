@@ -3,7 +3,7 @@ import logo from './logo.svg';
 
 function TermsOfService() {
     return (<>
-    Privacy Policy for Cobs Cobblers
+Privacy Policy for Cobs Cobblers
 English
 Privacy Policy
 Last updated: January 13, 2022
@@ -216,7 +216,7 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
 Policy are effective when they are posted on this page.
 Contact Us
 If you have any questions about this Privacy Policy, You can contact us:
-By email: info@CobsCobblers.com
+By email: <b> <a href="mailto:info@CobsCobblers.com">info@CobsCobblers.com</a></b>
     </>
     );
 }
