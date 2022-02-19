@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import './CobSeafoodLight.css';
-import { Menu, Button, Icon, Label, MenuItemProps, Segment, MenuItem, Dropdown, Input, MenuHeader, Message, Container, Divider } from 'semantic-ui-react'
-import FoodListItemLight from './FoodListItemLight';
-import CobSeafoodListingLight from './CobSeafoodListingLight';
+import './CobSeafoodDark.css';
+import { Menu, Button, Icon, Label, MenuItemProps, Segment, MenuItem, Dropdown, Input, MenuHeader, Message, Container, Divider, Modal } from 'semantic-ui-react'
+import FoodListItem from './FoodListItemDark';
+import CobSeafoodListingDark from './CobSeafoodListingDark';
 import { kMaxLength } from 'buffer';
 import CobSeafoodHeader from './CobSeafoodHeader';
-import CobSeafoodShoppingLight from './CobSeafoodShoppingLight';
-import CobSeafoodShopCheckoutLight from './CobSeafoodCheckoutLight';
+import CobSeafoodShoppingDark from './CobSeafoodShoppingDark';
+import CobSeafoodShopCheckoutDark from './CobSeafoodCheckoutDark';
 
 interface Props {
 
@@ -21,17 +21,18 @@ interface States {
     priceMap: Map<string, number>;
     cart: Map<string, number>;
     imageMap: Map<string, string>;
+    adopen:boolean
 }
 
 
 
 
-class CobSeafoodLight extends Component<Props, States> {
+class CobSeafoodDark extends Component<Props, States> {
 
     constructor(props: Props) {
         super(props);
         this.state = {
-            totalPrice: 0, itemCount: 0, activeItem: "", checkingOut: false, priceMap: new Map(), cart: new Map(), imageMap: new Map()
+            totalPrice: 0, itemCount: 0, activeItem: "", checkingOut: false, priceMap: new Map(), cart: new Map(), imageMap: new Map(),adopen:true
         }
 
 
@@ -75,7 +76,7 @@ class CobSeafoodLight extends Component<Props, States> {
                         </Menu.Menu>
                     </Menu>
 
-                    {!this.state.checkingOut && <CobSeafoodShoppingLight onCartUpdate={(totalPrice: number, itemCount: number, priceMap: Map<string, number>, cart: Map<string, number>, imageMap: Map<string, string>) => {
+                    {!this.state.checkingOut && <CobSeafoodShoppingDark onCartUpdate={(totalPrice: number, itemCount: number, priceMap: Map<string, number>, cart: Map<string, number>, imageMap: Map<string, string>) => {
 
                         if (totalPrice != this.state.totalPrice || itemCount != this.state.itemCount) {
                             this.setState({
@@ -87,7 +88,7 @@ class CobSeafoodLight extends Component<Props, States> {
                             });
                         }
                     }} />}
-                    {this.state.checkingOut && <CobSeafoodShopCheckoutLight
+                    {this.state.checkingOut && <CobSeafoodShopCheckoutDark
                         cart={this.state.cart}
                         itemCount={this.state.itemCount}
                         totalPrice={this.state.totalPrice}
@@ -97,6 +98,25 @@ class CobSeafoodLight extends Component<Props, States> {
                         onOrderCanceled={() => { this.setState({ checkingOut: false }) }}
                     />}
                 </div>
+
+                <Modal
+                    dimmer="blurring"
+                    open={this.state.adopen}
+                    onClose={()=>{this.setState({adopen:false})}}
+                    centered
+                >
+                    <Modal.Header><span  className='HW2-SaleHeader'>SALE SALE SALE SALE!!!! ----- Welcome to Cob's Seafood Emporium!  ----- SALE SALE SALE SALE!!!</span></Modal.Header>
+                    <Modal.Content>
+                        <div className='HW2-SaleContent'>
+                        FREEE SHIPPING - only 10 more minutes! Claim your SEAFOOD NOW! Plenty of SOLE and even SHARK!!!
+                        </div>
+                    </Modal.Content>
+                    <Modal.Actions>
+                        <Button size="massive" positive onClick={()=>{this.setState({adopen:false})}}>
+                            GO!
+                        </Button>
+                    </Modal.Actions>
+                </Modal>
             </>
         );
     }
@@ -106,4 +126,4 @@ class CobSeafoodLight extends Component<Props, States> {
     }
 }
 
-export default CobSeafoodLight;
+export default CobSeafoodDark;

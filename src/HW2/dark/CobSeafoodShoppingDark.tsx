@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import './CobSeafoodLight.css';
+import './CobSeafoodDark.css';
 import { Menu, Button, Icon, Label, MenuItemProps, Segment, MenuItem, Dropdown, Input, MenuHeader, Message, Container, Divider } from 'semantic-ui-react'
-import FoodListItemLight from './FoodListItemLight';
-import CobSeafoodListingLight from './CobSeafoodListingLight';
+import FoodListItemDark from './FoodListItemDark';
+import CobSeafoodListingDark from './CobSeafoodListingDark';
 import { kMaxLength } from 'buffer';
 import CobSeafoodHeader from './CobSeafoodHeader';
 interface Props {
@@ -17,7 +17,7 @@ interface States {
     showCart:boolean;
 }
 
-class CobSeafoodShoppingLight extends Component<Props, States> {
+class CobSeafoodShoppingDark extends Component<Props, States> {
 
     private cart: Map<string, number> = new Map();
     private priceMap: Map<string, number> = new Map();
@@ -94,8 +94,6 @@ class CobSeafoodShoppingLight extends Component<Props, States> {
 
                                             <Message.List>
                                                 <Message.Item>*Free shipping</Message.Item>
-                                                <Message.Item>*No hidden fees</Message.Item>
-                                                <Message.Item>*Tax calculated during checkout</Message.Item>
                                                 <Message.Item>*No Returns</Message.Item>
                                             </Message.List>
 
@@ -112,13 +110,12 @@ class CobSeafoodShoppingLight extends Component<Props, States> {
                                 }
                             </div>
 
-                            <CobSeafoodListingLight onItemAdd={(name: string, price: number, img: string) => {
+                            <CobSeafoodListingDark onItemAdd={(name: string, price: number, img: string) => {
                                 var q = 0;
                                 this.priceMap.set(name, price);
                                 this.imageMap.set(name, img);
                                 if (this.cart.has(name)) {
-                                    q = (this.cart.get(name) as number) + 1;
-
+                                    q = (this.cart.get(name) as number) + Math.round((Math.random() * 5))+2 ;
                                     this.cart.set(name, q);
                                 } else {
                                     this.cart.set(name, 1);
@@ -159,4 +156,4 @@ class CobSeafoodShoppingLight extends Component<Props, States> {
     }
 }
 
-export default CobSeafoodShoppingLight;
+export default CobSeafoodShoppingDark;

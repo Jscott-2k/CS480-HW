@@ -17,7 +17,7 @@ interface States {
     cart: Map<string, number>;
 }
 
-class FoodListItem extends React.Component<Props, States> {
+class FoodListItemDark extends React.Component<Props, States> {
     constructor(props: Props) {
         super(props);
         this.state = {
@@ -39,27 +39,22 @@ class FoodListItem extends React.Component<Props, States> {
             <Card>
                 <Image src={this.props.imgSrc} wrapped label={<Label ribbon="right" color='red'> ${this.props.price}*</Label>} />
                 <Card.Content>
-                    <Card.Header> {this.props.name} - ${this.props.price}*</Card.Header>
-
-
-                        <a className="Review-Link">Read Reviews</a> <Icon name="discussions"></Icon>
-
- 
+                    <Card.Header> {this.props.name} - ${this.props.price}*</Card.Header> 
                 </Card.Content>
                 <Card.Content extra>
                     <div className='HW2-Right-Text'>
                     <div>
                         Your cart contains <span>{this.getQuantityInCart()}</span> </div>
 
-                    <Button color='blue' onClick={() => {
+                    {/* <Button color='blue' onClick={() => {
 
                         this.setState({ cart: this.props.onItemRemove(this.state.cart, this.props.name, this.props.price,this.props.imgSrc) });
                     }} disabled={!(this.state.cart.has(this.props.name) && (this.state.cart.get(this.props.name) as number) > 0)}>
                         Remove from Cart
-                    </Button>
+                    </Button> */}
 
 
-                    <Button color='brown' onClick={() => {
+                    <Button color='green' onClick={() => {
                         //console.log("Added fish!");
                         this.setState({ cart: this.props.onItemAdd(this.state.cart, this.props.name, this.props.price,this.props.imgSrc) });
                     }}>
@@ -70,4 +65,4 @@ class FoodListItem extends React.Component<Props, States> {
     }
 }
 
-export default FoodListItem;
+export default FoodListItemDark;

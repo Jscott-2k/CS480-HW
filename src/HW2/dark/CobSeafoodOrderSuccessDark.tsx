@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import './CobSeafoodLight.css';
+import './CobSeafoodDark.css';
 import { Menu, Button, Icon, Label, MenuItemProps, Segment, MenuItem, Dropdown, Input, MenuHeader, Message, Container, Divider } from 'semantic-ui-react'
-import FoodListItemLight from './FoodListItemLight';
-import CobSeafoodListingLight from './CobSeafoodListingLight';
+import FoodListItem from './FoodListItemDark';
+import CobSeafoodListingLight from './CobSeafoodListingDark';
 import { kMaxLength } from 'buffer';
 import CobSeafoodHeader from './CobSeafoodHeader';
 interface OrderSuccessProps {
@@ -17,7 +17,7 @@ interface States {
     showCart: boolean;
 }
 
-class CobSeafoodOrderSuccessLight extends Component<OrderSuccessProps, States> {
+class CobSeafoodOrderSuccessDark extends Component<OrderSuccessProps, States> {
 
     private cart: Map<string, number> = new Map();
     private priceMap: Map<string, number> = new Map();
@@ -85,10 +85,13 @@ class CobSeafoodOrderSuccessLight extends Component<OrderSuccessProps, States> {
                                      Your Order <a>#0000000000</a> is Complete!
                                     </Message.Header>
                                     <Message.Content>
-                                        <p>If you have any concerns about your order please email <a href="mailto:blackbeard@jscott.crabdance.com">blackbeard@jscott.crabdance.com</a></p>
+                                        <p>If you have any concerns about your order please FAX <a href="fax:1+(806)-905-6421">1+(806)-905-6421</a>
+                                        </p> <p>
+                                        When sending a fax, please make sure to include your order-number, full name, what you ordered, my date of birth, and your social security number. Response time is approximately once per winter solstice.
+                                        </p>
                                     </Message.Content>
                                 </Message>
-                                <a href="/hw2light"><Button color='brown'>
+                                <a href="/hw2dark"><Button color='brown'>
                                     Return to Shop
                                 </Button></a>
                             </div>
@@ -104,4 +107,4 @@ class CobSeafoodOrderSuccessLight extends Component<OrderSuccessProps, States> {
     }
 }
 export type {OrderSuccessProps};
-export default CobSeafoodOrderSuccessLight;
+export default CobSeafoodOrderSuccessDark;
