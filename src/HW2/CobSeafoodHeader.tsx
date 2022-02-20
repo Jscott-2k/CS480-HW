@@ -14,7 +14,7 @@ class CobSeafoodHeader extends React.Component {
                 <header className="HW2-header">
                     Cob's Seafood Emporium
                 </header>
-                <h3> <i>Get your scurvy claws on the finest grup on the planet! </i><span><Icon name="globe" size='small' /></span></h3>
+                <h3> <i>Get your scurvy claws on the finest grub on the planet! </i><span><Icon name="globe" size='small' /></span></h3>
             </>);
     }
 }
