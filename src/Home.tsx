@@ -36,6 +36,16 @@ class Home extends React.Component {
                                 <a href="/HW2dark">See Dark Version</a>
                             </li> </ul>
                     </li>
+                    <li>
+                        <ul>
+                            <h4>Homework 3 - Cob's Soulo Game</h4>
+                            <li>
+                                <a href="/HW3light">See Light Version</a>
+                            </li>
+                            <li>
+                                <a href="/HW3dark">See Dark Version</a>
+                            </li> </ul>
+                    </li>
                 </ul>
             </div>
         </>);
