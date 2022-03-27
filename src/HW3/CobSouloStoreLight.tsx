@@ -178,7 +178,7 @@ class CobSouloStoreLight extends Component<Props, States> {
 
 
     render() {
-        const { day, wealth, setGold, setBrass, setSilver, setWealth, setUser, setSouls, souls, boost, darkMode, user } = this.context;
+        const { day, wealth, setGold, setBrass, setSilver, setWealth, setUser, setSouls, souls, boost, darkMode, user,dailyRechargeDeal } = this.context;
 
         return (
             <>
@@ -229,21 +229,21 @@ class CobSouloStoreLight extends Component<Props, States> {
                             {!this.props.recharge && <>
                                 {day >= 7 &&
                                     <CobSouloStoreItemLight name="Dark Mode Skin" price={2} onBuyClick={this.readyPurchase} imgSrc="./demon.png" currency="brass" action={() => {
-                                        setUser({ day: day, wealth: { gold: wealth.gold, silver: wealth.silver, brass: wealth.brass - 2 }, darkMode: true, setBrass: setBrass, setGold: setGold, setSilver: setSilver, setWealth: setWealth, souls: souls, boost: boost, setSouls: souls });
+                                        setUser({ day: day, wealth: { gold: wealth.gold, silver: wealth.silver, brass: wealth.brass - 2 }, darkMode: true, setBrass: setBrass, setGold: setGold, setSilver: setSilver, setWealth: setWealth, souls: souls, boost: boost, setSouls: souls,dailyRechargeDeal:dailyRechargeDeal });
                                     }} sale={true} saleRed={90} approxUSDDisplay={this.state.currencyUSDDisplay}/>
                                 }
                                 <CobSouloStoreItemLight name="2x Boost" price={11} onBuyClick={this.readyPurchase} imgSrc="./boost1.png" currency="gold" action={() => {
 
-                                    setUser({ day: day, wealth: { gold: wealth.gold - 11, silver: wealth.silver, brass: wealth.brass }, darkMode: false, setBrass: setBrass, setGold: setGold, setSilver: setSilver, setWealth: setWealth, souls: souls, boost: boost * 2, setSouls: souls });
+                                    setUser({ day: day, wealth: { gold: wealth.gold - 11, silver: wealth.silver, brass: wealth.brass }, darkMode: false, setBrass: setBrass, setGold: setGold, setSilver: setSilver, setWealth: setWealth, souls: souls, boost: boost * 2, setSouls: souls,dailyRechargeDeal:dailyRechargeDeal });
                                 }} sale={false} saleRed={0} approxUSDDisplay={this.state.currencyUSDDisplay}/>
                                 <CobSouloStoreItemLight name="4x Boost" price={32} onBuyClick={this.readyPurchase} imgSrc="./boost2.jpg" currency="gold" action={() => {
-                                    setUser({ day: day, wealth: { gold: wealth.gold - 32, silver: wealth.silver, brass: wealth.brass }, darkMode: false, setBrass: setBrass, setGold: setGold, setSilver: setSilver, setWealth: setWealth, souls: souls, boost: boost * 4, setSouls: souls });
+                                    setUser({ day: day, wealth: { gold: wealth.gold - 32, silver: wealth.silver, brass: wealth.brass }, darkMode: false, setBrass: setBrass, setGold: setGold, setSilver: setSilver, setWealth: setWealth, souls: souls, boost: boost * 4, setSouls: souls,dailyRechargeDeal:dailyRechargeDeal });
                                 }} sale={false} saleRed={0} approxUSDDisplay={this.state.currencyUSDDisplay}/>
                                 <CobSouloStoreItemLight name="100,000 souls" price={63} onBuyClick={this.readyPurchase} imgSrc="./ghostTwo.gif" currency="gold" action={() => {
                                     // setGold(wealth.gold - 63);
                                     // setSouls(souls+100000);
 
-                                    setUser({ day: day, wealth: { gold: wealth.gold - 63, silver: wealth.silver, brass: wealth.brass }, darkMode: darkMode, setBrass: setBrass, setGold: setGold, setSilver: setSilver, setWealth: setWealth, souls: souls + 100000, boost: boost, setSouls: souls });
+                                    setUser({ day: day, wealth: { gold: wealth.gold - 63, silver: wealth.silver, brass: wealth.brass }, darkMode: darkMode, setBrass: setBrass, setGold: setGold, setSilver: setSilver, setWealth: setWealth, souls: souls + 100000, boost: boost, setSouls: souls,dailyRechargeDeal:dailyRechargeDeal });
 
                                 }} sale={false} saleRed={0} approxUSDDisplay={this.state.currencyUSDDisplay}/>
 
@@ -251,7 +251,7 @@ class CobSouloStoreLight extends Component<Props, States> {
                                     // setGold(wealth.gold - 63);
                                     // setSouls(souls+100000);
 
-                                    setUser({ day: day, wealth: { gold: wealth.gold, silver: wealth.silver - 4, brass: wealth.brass }, darkMode: darkMode, setBrass: setBrass, setGold: setGold, setSilver: setSilver, setWealth: setWealth, souls: souls + 1000, boost: boost, setSouls: souls });
+                                    setUser({ day: day, wealth: { gold: wealth.gold, silver: wealth.silver - 4, brass: wealth.brass }, darkMode: darkMode, setBrass: setBrass, setGold: setGold, setSilver: setSilver, setWealth: setWealth, souls: souls + 1000, boost: boost, setSouls: souls,dailyRechargeDeal:dailyRechargeDeal });
 
                                 }} sale={false} saleRed={0} approxUSDDisplay={this.state.currencyUSDDisplay}/>
                             </>}
