@@ -27,7 +27,7 @@ class CobSouloLoginBonusDark extends Component<Props, States> {
         this.state = {
             navigate: false,
             day: this.props.day,
-            check1: true, check2: true
+            check1: false, check2: false
         }
 
 
@@ -75,13 +75,13 @@ class CobSouloLoginBonusDark extends Component<Props, States> {
                 </div>
                 <div style={{ backgroundColor: "white", margin: "1em", padding: ".5em" }}>
                     <div style={{ margin: ".5em" }}>
-                        <Checkbox label="I have read the incantation above*" onChange={
+                        <Checkbox defaultChecked label="I have read the incantation above*" onChange={
                             (e, d) => {
                                 this.setState({ check1: d.checked ? false : true })
                             }}>
                         </Checkbox></div>
                     <div style={{ padding: ".5em", margin: ".5em" }}>
-                        <Checkbox label="I agree to be one step closer to dark mode" onChange={
+                        <Checkbox defaultChecked label="I agree to be one step closer to dark mode" onChange={
                             (e, d) => {
                                 this.setState({ check2: d.checked ? false : true })
                             }}></Checkbox></div></div>

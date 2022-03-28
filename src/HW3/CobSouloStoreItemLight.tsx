@@ -17,6 +17,8 @@ interface Props {
     bonusDesc?: string
     bestValue?: boolean
     approxUSDDisplay: boolean
+    alreadyOwn?:boolean
+    
 }
 
 interface States {
@@ -78,7 +80,15 @@ class CobSouloStoreItemLight extends Component<Props, States> {
         }
         console.log(approxUSD);
 
-        if (!dailyRechargeDeal && this.props.dailyBonus) {
+        let unavailable = this.props.alreadyOwn || (!dailyRechargeDeal && this.props.dailyBonus);
+        let unavailableText = "Unavailable"
+        
+        if(this.props.alreadyOwn){
+            unavailableText = "Already Own"
+        }
+        console.log("Already own:" + this.props.alreadyOwn)
+
+        if (unavailable) {
             return <>
                 <Card color="red" raised>
 
@@ -108,14 +118,14 @@ class CobSouloStoreItemLight extends Component<Props, States> {
                             <Image src={this.props.imgSrc} size="small" wrapped />
                         </div>
                         <Divider></Divider>
-                        <div>
+                        {(!dailyRechargeDeal && this.props.dailyBonus) && <div>
                             This item is limited to 1 purchase per day
-                        </div>
+                        </div>}
                         <div className='HW3BuyItemDark'>
                             <Button color="grey" onClick={() => {
                                 this.props.onBuyClick(this.props.price, this.props.name, this.props.currency, this.props.action, this.props.imgSrc)
                             }} disabled={true}>
-                                {this.props.currency === 'usd' && <Icon name="plus"></Icon>} Unavailable
+                                {this.props.currency === 'usd' && <Icon name="plus"></Icon>}  {unavailableText}
                             </Button>
                         </div>
                     </Card.Content>

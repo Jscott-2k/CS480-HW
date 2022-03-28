@@ -90,7 +90,7 @@
     0%{
         color:red;
     }50%{
-        color:black
+        color:pink
     }100%{
         color:white;
     }
@@ -107,7 +107,7 @@
     font-size: 20px;
     font-family: monospace;
     animation-name: redblackColorAnim;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-direction: alternate;
     animation-iteration-count: infinite;
