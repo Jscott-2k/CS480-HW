@@ -312,7 +312,7 @@
 
 .HW3SoulStoreContainer{
     background-color: black;
-    height:100vh;
+    height:max-content;
     display: flex;
     align-items: center;
     font-family: monospace;
@@ -335,7 +335,7 @@
     font-family: monospace;
 }
 .HW3GameMainContainer{
-    height:100vh;
+    height:max-content;
 
 }
 
@@ -366,9 +366,16 @@
     padding:1em;
     display: flex;
     background-color: black;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .HW3StoreOutsideButton{
-    margin:2em;
+    padding:1.5em;
 
+}
+
+.HW3MaxViewHeight{
+    height:100vh;
+    background: black;
 }

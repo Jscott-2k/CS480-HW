@@ -182,6 +182,7 @@ class CobSouloStoreLight extends Component<Props, States> {
 
         return (
             <>
+            <div className="HW3MaxViewHeight">
                 <div className='HW3SoulStoreContainer'>
                     <div className='HW3SoulStoreHeader'>
                         {this.props.recharge &&
@@ -292,7 +293,7 @@ class CobSouloStoreLight extends Component<Props, States> {
                         <Image size='large' srcSet="./spooky.gif"></Image></div>
                 </div>
                 <div></div>
-
+                </div>
                 <Modal
                     open={this.state.open}
 
@@ -453,6 +454,7 @@ class CobSouloStoreLight extends Component<Props, States> {
                     <Modal.Actions>
                     </Modal.Actions>
                 </Modal>
+                
             </>
         );
     }

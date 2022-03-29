@@ -44,7 +44,7 @@ class CobSouloGameDark extends Component<Props, States> {
         const {darkMode} = this.context
         return (
             <>
-               
+               <div className="HW3MaxViewHeight">
                 <div style={{backgroundColor:"black"}} className="HW3GameMainContainer"> 
                     <div className='HW3GameHeader'><div>Cob's Soulo Game</div></div>
                     <div>
@@ -60,6 +60,7 @@ class CobSouloGameDark extends Component<Props, States> {
 
                         <CobSouloLoginProgressDark/>
                     </div>
+                </div>
                 </div>
             </>
         );
