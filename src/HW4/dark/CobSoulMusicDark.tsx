@@ -6,8 +6,7 @@ import CobSoulMusicSelectionContainerDark from './CobSoulMusicSelectionContainer
 import CobSoulMusicFavoritesMenuDark from './CobSoulMusicFavoritesMenuDark';
 import CobSoulMusicHeaderDark from './CobSoulMusicHeaderDark';
 import CobSoulMusicSearchMenuDark from './CobSoulMusicSearchMenuDark';
-import Particles from "react-tsparticles";
-import CobSoulMusicParticles from './CobSoulMusicParticles';
+
 import CobSoulMusicSignInPopupDark from './CobSoulMusicSignInPopupDark';
 import CobSoulMusicNowPlayingDark from './CobSoulMusicNowPlayingDark';
 import CobSoulMusicBannerAdDark from './CobSoulMusicBannerAdDark';

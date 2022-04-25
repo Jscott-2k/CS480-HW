@@ -6,8 +6,8 @@ import CobSoulMusicSelectionContainerDark from './CobSoulMusicSelectionContainer
 import CobSoulMusicFavoritesMenuDark from './CobSoulMusicFavoritesMenuDark';
 import CobSoulMusicHeaderDark from './CobSoulMusicHeaderDark';
 import CobSoulMusicSearchMenuDark from './CobSoulMusicSearchMenuDark';
-import Particles from "react-tsparticles";
-import CobSoulMusicParticles from './CobSoulMusicParticles';
+
+
 import { Button, Checkbox, Embed, Form, Icon, Input, Modal } from 'semantic-ui-react';
 import CobSoulMusicAdProgressTimerDark from './CobSoulMusicAdProgressTimerDark';
 

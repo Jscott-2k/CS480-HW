@@ -7,7 +7,7 @@ import CobSoulMusicFavoritesMenuDark from './CobSoulMusicFavoritesMenuDark';
 import CobSoulMusicHeaderDark from './CobSoulMusicHeaderDark';
 import CobSoulMusicItemDark from './CobSoulMusicItemDark';
 import CobSoulMusicSearchMenuDark from './CobSoulMusicSearchMenuDark';
-import Particles from "react-tsparticles";
+
 import CobSoulMusicItemNativeAdDark from './CobSoulMusicItemNativeAdDark';
 
 interface CobSoulMusicSelectionContainerDarkProps {
