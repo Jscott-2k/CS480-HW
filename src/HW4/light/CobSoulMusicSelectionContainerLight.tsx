@@ -25,6 +25,7 @@ interface CobSoulMusicSelectionContainerLightProps {
     autoPlays:number,
     autoPlayEnabled:boolean,
     onAutoPlay:(songName: string, songDescription: string, autoPlays:number)=>void;
+    darkMode:boolean
 }
 
 interface CobSoulMusicSelectionContainerLightStates {
@@ -90,7 +91,7 @@ export default class CobSoulMusicSelectionContainerLight extends React.Component
                 "genre": "Afterlife",
                 "artist": "Jeremy Soule",
                 "content": <>
-                    <CobSoulMusicItemNativeAdLight src="shoe6.jpg" name="Cob's Shrek Shoes" description='Best for swamps!' adOwner='Cob'></CobSoulMusicItemNativeAdLight>
+                    <CobSoulMusicItemNativeAdLight  darkMode={this.props.darkMode} src="shoe6.jpg" name="Cob's Shrek Shoes" description='Best for swamps!' adOwner='Cob'></CobSoulMusicItemNativeAdLight>
                 </>
             },{
                 "plays":6006,
@@ -143,7 +144,7 @@ export default class CobSoulMusicSelectionContainerLight extends React.Component
                 "genre": "1960s",
                 "artist": "Sonny & Cher",
                 "content": <>
-                    <CobSoulMusicItemNativeAdLight src="cereal.png" name="Cereal Flakes" description='Asbestos Free' adOwner='Cereal Flakes'></CobSoulMusicItemNativeAdLight>
+                    <CobSoulMusicItemNativeAdLight src="cereal.png" name="Cereal Flakes" description='Asbestos Free' adOwner='Cereal Flakes' darkMode={this.props.darkMode}></CobSoulMusicItemNativeAdLight>
                 </>
             },  {
                 "plays":62232,
@@ -213,7 +214,7 @@ export default class CobSoulMusicSelectionContainerLight extends React.Component
                 "genre": "Modern",
                 "artist": "Denzel Crocker",
                 "content": <>
-                    <CobSoulMusicItemNativeAdLight src="breaks.jfif" name="Jim’s Brake Pads" description="Jim’s Brake Pads, “They Work Every Time, 50% Of The Time”" adOwner='Jim'></CobSoulMusicItemNativeAdLight>
+                    <CobSoulMusicItemNativeAdLight  darkMode={this.props.darkMode} src="breaks.jfif" name="Jim’s Brake Pads" description="Jim’s Brake Pads, “They Work Every Time, 50% Of The Time”" adOwner='Jim'></CobSoulMusicItemNativeAdLight>
                 </>
             },   {
                 "plays":1999,

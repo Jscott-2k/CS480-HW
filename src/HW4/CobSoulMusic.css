@@ -202,7 +202,7 @@
     color:greenyellow;
     bottom: 0;
     width: 100%;
-    padding: 1em;
+    padding: .15em;
     font-size: 20px;
     z-index: 5;;
 }
@@ -240,7 +240,9 @@
     display: flex;
     justify-content: center;
 }
-
+.HW4-DarkModeWhite{
+    color:white;
+}
 .HW4-PeppeDance{
     width: 50px;
     animation:  duration timing-function delay iteration-count direction fill-mode;

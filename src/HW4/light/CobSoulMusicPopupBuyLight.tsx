@@ -14,6 +14,7 @@ import CobSoulMusicAdProgressTimerLight from './CobSoulMusicAdProgressTimerLight
 interface CobSoulMusicPopupBuyLightProps {
     openUp: boolean
     onClose: () => void
+    onCancel: () => void
     price: number
     desc: string
     head: string
@@ -100,10 +101,18 @@ export default class CobSoulMusicPopupBuyLight extends React.Component<CobSoulMu
                         </span>
                     </Modal.Content>
                     <Modal.Actions>
+                    <Button
+                            icon='x'
+                            color='blue'
+                            
+                            content='Cancel'
+                            onClick={() => { this.setOpen(false, true); this.props.onCancel() }}
+                        />
+
                         <Button
                             icon='check'
-                            color='green'
-                            inverted
+                            color='teal'
+                            
                             content='Order'
                             onClick={() => { this.setOpen(false, true); this.props.onClose() }}
                         />

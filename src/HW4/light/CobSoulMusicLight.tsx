@@ -184,7 +184,7 @@ export default class CobSoulMusicLight extends React.Component<CobSoulMusicLight
                             </div>
                             <div className="HW4-Flex HW4-JustifyContentCenter">
                                 <div className='HW4-AdDisclaimerContainer'>
-                                    <div>
+                                    <div className={`${this.state.songsListened >= this.darkModeReq ? "HW4-DarkModeWhite" : " "}`}>
                                         <h3>Advertisement Disclaimer!</h3>
                                         <p>
                                             We at Cob's Co. rely on an ad-based buisness model! This requires us to place advertisements at various locations.
@@ -207,9 +207,11 @@ export default class CobSoulMusicLight extends React.Component<CobSoulMusicLight
                                 console.log("Changed filter: " + newFilter.artist)
                             }} lastFiler={this.state.filters}></CobSoulMusicSearchMenuLight>
                             {this.state.signedIn && <>
+                                <div className={`${this.state.songsListened >= this.darkModeReq ? "HW4-DarkModeWhite" : " "}`}>
                                 <span className='HW4-Bolder HW4-Larger'>Thanks for signing in!</span>
                                 <div>
                                     You have {this.state.freeSongs} remaining play until your next video ad!
+                                </div>
                                 </div>
                             </>}
                             {!this.state.signedIn && <>
@@ -222,7 +224,7 @@ export default class CobSoulMusicLight extends React.Component<CobSoulMusicLight
                                             Sign In
                                         </Button>
                                     </div>
-                                    <div className="HW4-AlignSelfCenter">
+                                    <div className={`HW4-AlignSelfCenter ${this.state.songsListened >= this.darkModeReq ? "HW4-DarkModeWhite" : " "}`}>
 
                                         After signing up at Cob's you will be able to see how many free plays you have unitl your next video ad.
                                         <div>
@@ -235,6 +237,7 @@ export default class CobSoulMusicLight extends React.Component<CobSoulMusicLight
                             </>}
                             <div></div>
                             <CobSoulMusicSelectionContainerLight
+                                darkMode={this.state.songsListened >= this.darkModeReq}
                                 onAutoPlay={(songName: string, songDescription: string, autoPlays: number) => {
                                     this.updateNowPlaying(songName, songDescription, autoPlays)
                                 }}
@@ -356,13 +359,17 @@ export default class CobSoulMusicLight extends React.Component<CobSoulMusicLight
                             q++;
                         }
                         this.setState({ showBuy: false, adSkips: this.state.adSkips + 26, boughtAdSkips: true, questsComplete: q });
-                    }} price={3.99} desc={'26 Ad skips'} head={'26 Ad skips'}>
+                    }} price={3.99} desc={'26 Ad skips'} head={'26 Ad skips'} onCancel={()=>{
+                        this.setState({ showBuy: false});
+                    }}>
 
                     </CobSoulMusicPopupBuyLight>
 
                     <CobSoulMusicPopupBuyLight openUp={this.state.showBuyAutoPlays} onClose={() => {
                         this.setState({ showBuyAutoPlays: false, boughtAutoPlays: true, autoPlays: this.state.autoPlays + 25 });
-                    }} price={9.99} desc={'25 Autoplays'} head={'25 Autoplays'}>
+                    }} price={9.99} desc={'25 Autoplays'} head={'25 Autoplays'} onCancel={()=>{
+                        this.setState({ showBuyAutoPlays: false});
+                    }}>
 
                     </CobSoulMusicPopupBuyLight>
 
