@@ -2,16 +2,16 @@ import React, { FC, LegacyRef, RefObject } from 'react';
 import { Header } from 'semantic-ui-react';
 
 import '../CobSoulMusic.css';
-import CobSoulMusicCommentsDark from './CobSoulMusicCommentsDark';
-import CobSoulMusicFavoritesMenuDark from './CobSoulMusicFavoritesMenuDark';
-import CobSoulMusicHeaderDark from './CobSoulMusicHeaderDark';
-import CobSoulMusicItemDark from './CobSoulMusicItemDark';
-import CobSoulMusicSearchMenuDark from './CobSoulMusicSearchMenuDark';
+import CobSoulMusicCommentsDark from './CobSoulMusicCommentsLight';
+import CobSoulMusicFavoritesMenuLight from './CobSoulMusicFavoritesMenuLight';
+import CobSoulMusicHeaderLight from './CobSoulMusicHeaderLight';
+import CobSoulMusicItemLight from './CobSoulMusicItemLight';
+import CobSoulMusicSearchMenuLight from './CobSoulMusicSearchMenuLight';
 
-import CobSoulMusicItemNativeAdDark from './CobSoulMusicItemNativeAdDark';
+import CobSoulMusicItemNativeAdLight from './CobSoulMusicItemNativeAdLight';
 
-interface CobSoulMusicSelectionContainerDarkProps {
-    onMusicPlay: () => void
+interface CobSoulMusicSelectionContainerLightProps {
+    onMusicPlay:  (songName: string, songDescription: string) => void
     onMusicStop: (swapedSongs:boolean) => void
     onReallyPlay: (songName: string, songDescription: string) => void
     signedIn: boolean
@@ -27,16 +27,16 @@ interface CobSoulMusicSelectionContainerDarkProps {
     onAutoPlay:(songName: string, songDescription: string, autoPlays:number)=>void;
 }
 
-interface CobSoulMusicSelectionContainerDarkStates {
+interface CobSoulMusicSelectionContainerLightStates {
     pauseAllOthers: boolean
     lastSongPlayed:string
 }
-export default class CobSoulMusicSelectionContainerDark extends React.Component<CobSoulMusicSelectionContainerDarkProps,
-    CobSoulMusicSelectionContainerDarkStates>{
+export default class CobSoulMusicSelectionContainerLight extends React.Component<CobSoulMusicSelectionContainerLightProps,
+    CobSoulMusicSelectionContainerLightStates>{
 
-    private myref: RefObject<CobSoulMusicItemDark> | undefined;
+    private myref: RefObject<CobSoulMusicItemLight> | undefined;
 
-    constructor(props: CobSoulMusicSelectionContainerDarkProps) {
+    constructor(props: CobSoulMusicSelectionContainerLightProps) {
         super(props);
         this.playMusic = this.playMusic.bind(this);
         this.reallyPlayMusic = this.reallyPlayMusic.bind(this);
@@ -48,8 +48,8 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
         }
     }
 
-    playMusic() {
-        this.props.onMusicPlay();
+    playMusic( songName: string, songDescription: string) {
+        this.props.onMusicPlay(songName, songDescription);
     }
     reallyPlayMusic(songName: string, songDescription: string) {
         this.setState({ pauseAllOthers: false,lastSongPlayed:songName });
@@ -71,7 +71,7 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "Jeremy Soule",
                 "content": <>
 
-                    <CobSoulMusicItemDark
+                    <CobSoulMusicItemLight
                         onAutoPlay={this.props.onAutoPlay}
                         onAddToFavorite={this.props.onAddToFavorite}
                         onRemoveFromFavorite={this.props.onRemoveFromFavorite}
@@ -82,7 +82,7 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                         signedIn={this.props.signedIn} plays={69000} favs={420}
                         name="Secunda" artist='Jeremy Soule' onMusicPlay={this.playMusic} genre="Afterlife" currentSongPlaying={this.state.lastSongPlayed}
                         soundClouudSrc="Secunda.mp3" stopMusic={this.state.pauseAllOthers} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled}>
-                    </CobSoulMusicItemDark>
+                    </CobSoulMusicItemLight>
                 </>
             }, {
                 "plays":4200,
@@ -90,7 +90,7 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "genre": "Afterlife",
                 "artist": "Jeremy Soule",
                 "content": <>
-                    <CobSoulMusicItemNativeAdDark src="shoe6.jpg" name="Cob's Shrek Shoes" description='Best for swamps!' adOwner='Cob'></CobSoulMusicItemNativeAdDark>
+                    <CobSoulMusicItemNativeAdLight src="shoe6.jpg" name="Cob's Shrek Shoes" description='Best for swamps!' adOwner='Cob'></CobSoulMusicItemNativeAdLight>
                 </>
             },{
                 "plays":6006,
@@ -99,12 +99,12 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "Jeremy Soule",
                 "content": <>
 
-                    <CobSoulMusicItemDark onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
+                    <CobSoulMusicItemLight onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
                         favorites={this.props.favorites} currentSongPlaying={this.state.lastSongPlayed}
                         soundClouudSrc="TavernTheme2.mp3" genre="Afterlife"
                         onMusicPlay={this.playMusic} plays={6006} favs={46}
                         description="Enjoy some mead after a long day of murdering tiny dragons."
-                        name="Tavern Theme II" artist='Jeremy Soule' stopMusic={this.state.pauseAllOthers}  ></CobSoulMusicItemDark>
+                        name="Tavern Theme II" artist='Jeremy Soule' stopMusic={this.state.pauseAllOthers}  ></CobSoulMusicItemLight>
                 </>
             }, {
                 "plays":999999,
@@ -113,14 +113,14 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "Jeremy Soule",
                 "content": <>
 
-                    <CobSoulMusicItemDark  onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
+                    <CobSoulMusicItemLight  onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
                         favorites={this.props.favorites} currentSongPlaying={this.state.lastSongPlayed}
                         description="Is this what heaven sounds like? Fight a world-eating dragon with your voice!"
                         soundClouudSrc="Sovngarde.mp3"
                         onMusicPlay={this.playMusic}
                         name="Sovngarde" artist='Jeremy Soule' genre="Afterlife"
                         plays={999999} favs={3192}
-                        ></CobSoulMusicItemDark>
+                        ></CobSoulMusicItemLight>
                 </>
 
             }, {
@@ -130,12 +130,12 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "Marvin Gaye",
                 "content": <>
 
-                    <CobSoulMusicItemDark onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
+                    <CobSoulMusicItemLight onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
                         favorites={this.props.favorites} currentSongPlaying={this.state.lastSongPlayed}
                         description="We do some climbing!"
                         soundClouudSrc="AintNoMountainHighEnough.mp3"
                         onMusicPlay={this.playMusic} plays={38402} favs={439}
-                        name="Ain't No Mountain High Enough" artist='Marvin Gaye' genre="1960s"></CobSoulMusicItemDark>
+                        name="Ain't No Mountain High Enough" artist='Marvin Gaye' genre="1960s"></CobSoulMusicItemLight>
                 </>
             },{
                 "plays":8401,
@@ -143,7 +143,7 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "genre": "1960s",
                 "artist": "Sonny & Cher",
                 "content": <>
-                    <CobSoulMusicItemNativeAdDark src="cereal.png" name="Cereal Flakes" description='Asbestos Free' adOwner='Cereal Flakes'></CobSoulMusicItemNativeAdDark>
+                    <CobSoulMusicItemNativeAdLight src="cereal.png" name="Cereal Flakes" description='Asbestos Free' adOwner='Cereal Flakes'></CobSoulMusicItemNativeAdLight>
                 </>
             },  {
                 "plays":62232,
@@ -152,14 +152,14 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "Sonny & Cher",
                 "content": <>
 
-                    <CobSoulMusicItemDark onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
+                    <CobSoulMusicItemLight onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
                         favorites={this.props.favorites} currentSongPlaying={this.state.lastSongPlayed}
                         description="Sonny & Cher were an American pop and entertainment duo in the 1960s and 1970s, made up of husband and wife Sonny Bono and Cher. The couple started their career in the mid-1960s as R&B backing singers for record producer Phil Spector."
                         soundClouudSrc="IGotYouBabe.mp3"
                         onMusicPlay={this.playMusic}
                         name="I Got You Babe" artist='Sonny & Cher' genre="1960s"
                         plays={62232} favs={931}
-                        ></CobSoulMusicItemDark>
+                        ></CobSoulMusicItemLight>
                 </>
             }, {
                 "plays":11118,
@@ -168,14 +168,14 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "Gladys Knight & The Pips",
                 "content": <>
 
-                    <CobSoulMusicItemDark onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
+                    <CobSoulMusicItemLight onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
                         favorites={this.props.favorites} currentSongPlaying={this.state.lastSongPlayed}
                         description="The classic about a man who finds out his woman is cheating on him was written by Norman Whitfield and Barrett Strong."
                         soundClouudSrc="Grapevine.mp3"
                         onMusicPlay={this.playMusic}
                         name="I Heard It Through The Grapevine" artist='Gladys Knight & The Pips'
                         favs={154} plays={11118}
-                        genre="1960s"></CobSoulMusicItemDark>
+                        genre="1960s"></CobSoulMusicItemLight>
                 </>
             }, {
                 "plays":123456,
@@ -184,12 +184,12 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "Hugh Neutron",
                 "content": <>
 
-                    <CobSoulMusicItemDark onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
+                    <CobSoulMusicItemLight onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
                         favorites={this.props.favorites} currentSongPlaying={this.state.lastSongPlayed}
                         description="Zoomer Humor"
                         soundClouudSrc="DonutBoy.mp3"
                         onMusicPlay={this.playMusic}
-                        name="Donut Boy" artist='Hugh Neutron' genre="Modern" plays={123456} favs={989}></CobSoulMusicItemDark>
+                        name="Donut Boy" artist='Hugh Neutron' genre="Modern" plays={123456} favs={989}></CobSoulMusicItemLight>
                 </>
             }, {
                 "plays":3420,
@@ -198,14 +198,14 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "Squidward Tentacles",
                 "content": <>
 
-                    <CobSoulMusicItemDark onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
+                    <CobSoulMusicItemLight onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
                         favorites={this.props.favorites} currentSongPlaying={this.state.lastSongPlayed}
                         description="Squidward finally gets his chance!"
                         soundClouudSrc="SolitudeInEMinor.mp3"
                         onMusicPlay={this.playMusic}
                         name="Solitude In E Minor" artist='Squidward Tentacles' genre="Modern"
                         plays={3420} favs={67}
-                        ></CobSoulMusicItemDark>
+                        ></CobSoulMusicItemLight>
                 </>
             },{
                 "plays":5555,
@@ -213,7 +213,7 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "genre": "Modern",
                 "artist": "Denzel Crocker",
                 "content": <>
-                    <CobSoulMusicItemNativeAdDark src="breaks.jfif" name="Jim’s Brake Pads" description="Jim’s Brake Pads, “They Work Every Time, 50% Of The Time”" adOwner='Jim'></CobSoulMusicItemNativeAdDark>
+                    <CobSoulMusicItemNativeAdLight src="breaks.jfif" name="Jim’s Brake Pads" description="Jim’s Brake Pads, “They Work Every Time, 50% Of The Time”" adOwner='Jim'></CobSoulMusicItemNativeAdLight>
                 </>
             },   {
                 "plays":1999,
@@ -222,14 +222,14 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "Denzel Crocker",
                 "content": <>
 
-                    <CobSoulMusicItemDark onAutoPlay={this.props.onAutoPlay}  autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
+                    <CobSoulMusicItemLight onAutoPlay={this.props.onAutoPlay}  autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
                         favorites={this.props.favorites} currentSongPlaying={this.state.lastSongPlayed}
                         description="FAIRYS!"
                         soundClouudSrc="SuperF.mp3"
                         onMusicPlay={this.playMusic}
                         name="Super F" artist='Denzel Crocker' genre="Modern"
                         plays={1999} favs={289}
-                        ></CobSoulMusicItemDark>
+                        ></CobSoulMusicItemLight>
                 </>
             }, {
                 "plays":2237,
@@ -238,12 +238,12 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "Minkks",
                 "content": <>
 
-                    <CobSoulMusicItemDark onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
+                    <CobSoulMusicItemLight onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
                         favorites={this.props.favorites} currentSongPlaying={this.state.lastSongPlayed}
                         description="Herobrine liked this."
                         soundClouudSrc="MinecraftSFXBeat.mp3"
                         onMusicPlay={this.playMusic}
-                        name="Minecraft SFX Beat" artist='Minkks' genre="Monke"  plays={2237} favs={124}></CobSoulMusicItemDark>
+                        name="Minecraft SFX Beat" artist='Minkks' genre="Monke"  plays={2237} favs={124}></CobSoulMusicItemLight>
                 </>
             }, {
                 "plays":45987,
@@ -252,14 +252,14 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "C418",
                 "content": <>
 
-                    <CobSoulMusicItemDark onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled}  stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
+                    <CobSoulMusicItemLight onAutoPlay={this.props.onAutoPlay} autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled}  stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
                         favorites={this.props.favorites} currentSongPlaying={this.state.lastSongPlayed}
                         description="Nostalgic overload..."
                         soundClouudSrc="Sweden.mp3"
                         onMusicPlay={this.playMusic}
                         name="Sweden" artist='C418' genre="Monke"
                         plays={45987} favs={264}
-                        ></CobSoulMusicItemDark>
+                        ></CobSoulMusicItemLight>
                 </>
             }, {
                 "plays":20312,
@@ -268,14 +268,14 @@ export default class CobSoulMusicSelectionContainerDark extends React.Component<
                 "artist": "Ninja Kiwi",
                 "content": <>
 
-                    <CobSoulMusicItemDark onAutoPlay={this.props.onAutoPlay}  autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
+                    <CobSoulMusicItemLight onAutoPlay={this.props.onAutoPlay}  autoPlays={this.props.autoPlays} autoPlayEnabled={this.props.autoPlayEnabled} stopMusic={this.state.pauseAllOthers} signedIn={this.props.signedIn} onReallyPlay={this.reallyPlayMusic} onAddToFavorite={this.props.onAddToFavorite} onRemoveFromFavorite={this.props.onRemoveFromFavorite} onMusicStop={this.stopMusic}
                         favorites={this.props.favorites} currentSongPlaying={this.state.lastSongPlayed}
                         description="When monkey and balloon took over the world."
                         soundClouudSrc="JazzBTD5.mp3"
                         onMusicPlay={this.playMusic}
                         name="BTD 5 Jazz Theme" artist='Ninja Kiwi' genre="Monke" 
                         plays={20312} favs={164}
-                        ></CobSoulMusicItemDark>
+                        ></CobSoulMusicItemLight>
                 </>
             }
 

@@ -62,7 +62,7 @@ export default class CobSoulMusicDark extends React.Component<CobSoulMusicDarkPr
             filters: {
                 genre: "All",
                 artist: "All",
-                sortByKey: "Most Plays",
+                sortByKey: "MostPlays",
                 selectedFavorite:undefined
             },
             showVideoPopup: false,
@@ -265,7 +265,7 @@ export default class CobSoulMusicDark extends React.Component<CobSoulMusicDarkPr
                  
                                     </ul>
                                     <div className="HW4-Clickable" onClick={() => { this.buyAutoPlays() }}>
-                                        <span>Unlock 25 Auto Plays for <span className='HW4-Smaller HW4-Strike HW4-Yellow'>$3.99</span> <span className='HW4-Red'>$1.99</span></span>
+                                        <span>Unlock 25 Auto Plays for <span className='HW4-Smaller HW4-Strike HW4-Yellow'>$13.99</span> <span className='HW4-Red'>$9.99</span></span>
                                     </div>
                                 </Container>
                             </Segment>
@@ -318,7 +318,7 @@ export default class CobSoulMusicDark extends React.Component<CobSoulMusicDarkPr
 
                     <CobSoulMusicPopupBuyDark openUp={this.state.showBuyAutoPlays} onClose={() => {
                         this.setState({ showBuyAutoPlays:false,boughtAutoPlays:true,  autoPlays:this.state.autoPlays + 25});
-                    }} price={1.99} desc={'25 Autoplays'} head={'25 Autoplays'}>
+                    }} price={9.99} desc={'25 Autoplays'} head={'25 Autoplays'}>
 
                     </CobSoulMusicPopupBuyDark>
 

@@ -70,6 +70,29 @@
     margin: 1em;
 }
 
+
+.HW4-MusicItemContainerLight{
+
+    width:340px;
+    height:340px;
+    border-radius: .25em;
+    border: red solid 2px;
+
+}
+.HW4-Blue{
+    color:blue;
+}
+.HW4-AdDisclaimerContainer{
+    border: solid red 2px;
+    width:500px;
+    padding:2em;
+    color:black;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
 .HW4-MusicItemContainerDark{
     background-color: rgba(137, 43, 226, 0.856);
 
@@ -82,7 +105,6 @@
     background-origin: content-box;
     background-position: 90%;
     background-repeat: no-repeat;
-
 }
 .HW4-MusicItemContainerDark-Playing{
     background-image: url("../../public/airpodsCrackle.gif");
@@ -200,11 +222,25 @@
 .HW4-Comments{
     margin-bottom: 16em;
 }
+.HW4-CommentsLight{
+    margin-bottom: 5em;
+}
 .HW4-CommentsSection{
     background-color: #f5f5dc4d;
     padding: 1.5em;
     border-radius: .25em;
 }
+.HW4-CommentsSectionLight{
+    background-color: #f5f5dc4d;
+    padding: 1.5em;
+    border-radius: .25em;
+    align-self: center;
+    justify-self: stretch;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
 .HW4-PeppeDance{
     width: 50px;
     animation:  duration timing-function delay iteration-count direction fill-mode;
@@ -214,13 +250,26 @@
     justify-content: center;
     margin: auto;
 }
-
+.HW4-BannerAdLight{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+}
 .HW4-ReadTermsDark{
     position: absolute;
     cursor: pointer;
     left:66%;
 }
-
+.HW4-ReadTermsLight{
+    cursor: pointer;
+}
+.HW4-Larger{
+    font-size: larger;
+}
+.HW4-AlignSelfCenter{
+    align-self: center;
+}
 .HW4-AdStatement{
     font-size: 28px;
     text-transform: capitalize;
@@ -232,6 +281,18 @@
     cursor: pointer;;
 }
 
+.HW4-AdStatementLight{
+    font-size: 28px;
+    text-transform: capitalize;
+    margin: .5em;
+    color: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.HW4-AdStatementLight div, .HW4-AdStatementLight a{
+    cursor: pointer;
+}
 .HW4-MarginLeftRight1{
     margin-left: 1em;
     margin-right: 1em;

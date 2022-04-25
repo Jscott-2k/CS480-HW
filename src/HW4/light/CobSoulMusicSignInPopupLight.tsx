@@ -1,29 +1,30 @@
 import React, { FC } from 'react';
 
 import '../CobSoulMusic.css';
-import CobSoulMusicCommentsDark from './CobSoulMusicCommentsDark';
-import CobSoulMusicSelectionContainerDark from './CobSoulMusicSelectionContainerDark';
-import CobSoulMusicFavoritesMenuDark from './CobSoulMusicFavoritesMenuDark';
-import CobSoulMusicHeaderDark from './CobSoulMusicHeaderDark';
-import CobSoulMusicSearchMenuDark from './CobSoulMusicSearchMenuDark';
+import CobSoulMusicCommentsDark from './CobSoulMusicCommentsLight';
+import CobSoulMusicSelectionContainerLight from './CobSoulMusicSelectionContainerLight';
+import CobSoulMusicFavoritesMenuLight from './CobSoulMusicFavoritesMenuLight';
+import CobSoulMusicHeaderLight from './CobSoulMusicHeaderLight';
+import CobSoulMusicSearchMenuLight from './CobSoulMusicSearchMenuLight';
 
-import { Button, Checkbox, Embed, Form, Icon, Input, Modal } from 'semantic-ui-react';
-import CobSoulMusicAdProgressTimerDark from './CobSoulMusicAdProgressTimerDark';
+import { Button, Checkbox, Embed, Form, Icon, Input, Label, Modal } from 'semantic-ui-react';
+import CobSoulMusicAdProgressTimerLight from './CobSoulMusicAdProgressTimerLight';
 
-interface CobSoulMusicSignInPopupDarkProps {
+interface CobSoulMusicSignInPopupLightProps {
     openUp: boolean
     onSignIn: () => void
-    onShowTerms:()=>void
+    onShowTerms: () => void
 }
 
 interface CobSoulMusicSignInPopupDarkStates {
     firstOpen: boolean
     secondOpen: boolean
     secondDisabled: boolean
-
+    readTerms: boolean
+    consentToTerms:boolean
 }
-export default class CobSoulMusicSignInPopupDark extends React.Component<CobSoulMusicSignInPopupDarkProps, CobSoulMusicSignInPopupDarkStates>{
-    constructor(props: CobSoulMusicSignInPopupDarkProps) {
+export default class CobSoulMusicSignInPopupLight extends React.Component<CobSoulMusicSignInPopupLightProps, CobSoulMusicSignInPopupDarkStates>{
+    constructor(props: CobSoulMusicSignInPopupLightProps) {
         super(props);
         this.setSecondOpen = this.setSecondOpen.bind(this);
         this.setFirstOpen = this.setFirstOpen.bind(this);
@@ -31,7 +32,9 @@ export default class CobSoulMusicSignInPopupDark extends React.Component<CobSoul
         this.state = {
             firstOpen: false,
             secondOpen: false,
-            secondDisabled: true
+            secondDisabled: true,
+            readTerms: false,
+            consentToTerms:false
         }
     }
 
@@ -66,27 +69,47 @@ export default class CobSoulMusicSignInPopupDark extends React.Component<CobSoul
                             <Icon name="music" />
                         </div>
                         <Modal.Description>
-                            You will be automatically entered into a random monthly lottery for a chance to win $100 <span className='HW4-LowContrast'>worth of Cobucks!</span>
-                            <p>Create your <b><i className='HW4-RGB'>free</i></b> account to access several amazing tunes! Please fill out all of your information below.</p>
+                            <b>You will be automatically entered into a random monthly lottery for a ~<b><i>0.001%</i></b> chance to win 92 Cobucks for <a href="">Cob's Soulo Game!</a>
+                                <br></br>
+                                Odds can increase or decrease depending on how many people enter!</b>
+                            <p>Create your <b><i>free</i></b> account to access several amazing tunes! Please fill out all of your information below.</p>
 
                             <Form>
                                 <Form.Group>
                                     <Form.Input placeholder="First Name" required />
                                     <Form.Input placeholder="Last Name" required /> </Form.Group>
                                 <Form.Input placeholder="email@gmail.com" required />
-                                <Form.Input placeholder="Social Security Number" required />
                                 <Form.Input placeholder="Phone Number" required />
-                                <Form.Checkbox defaultChecked label="I consent to be texted/emailed updates for Cob's Soul Music"></Form.Checkbox>
-                                <Form.Checkbox defaultChecked label="I consent to let Cob harvest my soul and to the terms of Service" radio></Form.Checkbox>
+                                <Form.Checkbox label="I consent to be texted/emailed updates for Cob's Soul Music"></Form.Checkbox>
+
+
+
+
+                                <span className='HW4-Bolder HW4-Blue HW4-ReadTermsLight' onClick={() => { this.setState({ readTerms: true }); this.props.onShowTerms(); }}>Click Here to Read Terms</span>
+                                <div>
+                                   <i> You must read the terms before consenting to sign up!</i>
+                                </div>
+                               <Form.Checkbox label="I consent to let Cob harvest my soul and to the terms of Service" 
+                               onChange={(e,d)=>{
+                                   this.setState({consentToTerms:d.checked as boolean});
+                               }}
+                               disabled={!this.state.readTerms}>
+
+
+                                </Form.Checkbox>
+
+
+
+
                             </Form>
-                            
+
                         </Modal.Description>
-                        
+
                     </Modal.Content>
                     <Modal.Actions>
-                    <span className='HW4-LowContrast HW4-ReadTermsDark' onClick={this.props.onShowTerms}>read terms here</span>
-                        <Button onClick={() => this.setSecondOpen(true)} color="green">
-                            Get Music <Icon name="arrow right" size='massive'/>
+
+                        <Button icon onClick={() => this.setSecondOpen(true)} color="blue"  disabled={!this.state.consentToTerms}>
+                        <Icon name="check" size='small' /> Finish Sign Up
                         </Button>
                     </Modal.Actions>
 
@@ -97,15 +120,17 @@ export default class CobSoulMusicSignInPopupDark extends React.Component<CobSoul
                     >
                         <Modal.Header>Thanks For Joining Us!</Modal.Header>
                         <Modal.Content>
-                            <p><i>You will be able to listen right after this ad! You can also win ad skips after adding your billing information!</i></p>
-                            <p>Check out some cool shoes from <a href="../HW1dark" className="HW4-Bolder" target={"_blank"}>Cob's Shoes</a> so you don't look like this fool. <span className='HW4-Bolder HW4-RGB'>Weekly Discount Available! </span></p>
+                            <p><i>You will be able to listen right after this ad! You can also buy ad skips after adding your billing information!</i></p>
+                            <p>Check out some cool shoes from <a href="../HW1dark" className="HW4-Bolder" target={"_blank"}>Cob's Shoes</a>!
+                            <div></div>
+                            <span className='HW4-Bolder'>Weekly Discount Available! </span></p>
 
                             <div>
                                 <iframe className='HW4-VideoAdIframe' width="560" height="415" src="https://www.youtube.com/embed/uTXw5CKcKGo?controls=0&autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen={false}></iframe>
                             </div>
                         </Modal.Content>
                         <Modal.Actions>
-                            <CobSoulMusicAdProgressTimerDark initalTime={8} updateTick={1000} onFinish={() => {
+                            <CobSoulMusicAdProgressTimerLight initalTime={8} updateTick={1000} onFinish={() => {
                                 this.setState({ secondDisabled: false });
                             }} />
                             <Button

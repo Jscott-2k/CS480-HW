@@ -13,6 +13,7 @@ import CobSouloLoginBonusDark from './HW3/CobSouloLoginBonusDark';
 import CobSouloGameDark from './HW3/CobSouloGameDark';
 import CobSouloLight from './HW3/CobSouloWelcomeLight';
 import CobSoulMusicDark from './HW4/dark/CobSoulMusicDark';
+import CobSoulMusicLight from './HW4/light/CobSoulMusicLight';
 
 function Routing() {
   return (
@@ -34,7 +35,7 @@ function Routing() {
           <Route path={"/HW3dark/game"} element={<CobSouloGameDark></CobSouloGameDark>}/> */}
 
 
-          <Route path="/HW4light" element={<CobSoulMusicDark></CobSoulMusicDark>} />
+          <Route path="/HW4light" element={<CobSoulMusicLight></CobSoulMusicLight>} />
           <Route path="/HW4dark" element={<CobSoulMusicDark></CobSoulMusicDark>} />
 
         </Routes>
