@@ -1,0 +1,100 @@
+
+  {
+    "Decades":[
+      
+      {
+        "key":"All",
+        "text":"All",
+        "value":"All"
+      },
+      {
+        "key":"1960s",
+        "text":"1960's",
+        "value":"1960s"
+      },
+      {
+        "key":"Modern",
+        "text":"Modern",
+        "value":"Modern"
+      },
+      {
+        "key":"Afterlife",
+        "text":"Afterlife",
+        "value":"Afterlife"
+      },
+      {
+        "key":"Monke",
+        "text":"Monke",
+        "value":"Monke"
+      }
+    ],
+
+    "Artist":[
+      {
+        "key":"All",
+        "text":"All",
+        "value":"All"
+      },{
+        "key":"Jeremy Soule",
+        "text":"Jeremy Soule",
+        "value":"Jeremy Soule"
+      },
+      {
+        "key":"Squidward Tentacles",
+        "text":"Squidward Tentacles",
+        "value":"Squidward Tentacles"
+      },
+      {
+        "key":"Sonny & Cher",
+        "text":"Sonny & Cher",
+        "value":"Sonny & Cher"
+      },
+      {
+        "key":"Denzel Crocker",
+        "text":"Denzel Crocker",
+        "value":"Denzel Crocker"
+      },
+      {
+        "key":"C418",
+        "text":"C418",
+        "value":"C418"
+      },
+      {
+        "key":"Minkks",
+        "text":"Minkks",
+        "value":"Minkks"
+      },
+      {
+        "key":"Ninja Kiwi",
+        "text":"Ninja Kiwi",
+        "value":"Ninja Kiwi"
+      },
+      {
+        "key":"Marvin Gaye",
+        "text":"Marvin Gaye",
+        "value":"Marvin Gaye"
+      },
+      {
+        "key":"Gladys Knight & The Pips",
+        "text":"Gladys Knight & The Pips",
+        "value":"Gladys Knight & The Pips"
+      }
+    ],
+    "SortBy":[
+      {
+        "key":"MostPlays",
+        "text":"Most Plays",
+        "value":"MostPlays"
+      },
+      {
+        "key":"ArtistName",
+        "text":"Artist Name",
+        "value":"ArtistName"
+      },
+      {
+        "key":"SongName",
+        "text":"Song Name",
+        "value":"SongName"
+      }
+    ]
+}

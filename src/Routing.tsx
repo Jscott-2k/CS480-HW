@@ -12,11 +12,12 @@ import CobSouloDark from './HW3/CobSouloWelcomeDark';
 import CobSouloLoginBonusDark from './HW3/CobSouloLoginBonusDark';
 import CobSouloGameDark from './HW3/CobSouloGameDark';
 import CobSouloLight from './HW3/CobSouloWelcomeLight';
+import CobSoulMusicDark from './HW4/dark/CobSoulMusicDark';
 
 function Routing() {
   return (
     <Router>
-      <div>
+
         <Routes>
           <Route path="/" element={<Home></Home>} />
           <Route path="/HW1dark" element={<CobLandingDark></CobLandingDark>} />
@@ -31,8 +32,12 @@ function Routing() {
           <Route path="/HW3dark" element={<CobSouloDark></CobSouloDark>} />
           {/* <Route path="/HW3dark/login" element={<CobSouloLoginBonusDark></CobSouloLoginBonusDark>}/>
           <Route path={"/HW3dark/game"} element={<CobSouloGameDark></CobSouloGameDark>}/> */}
+
+
+          <Route path="/HW4light" element={<CobSoulMusicDark></CobSoulMusicDark>} />
+          <Route path="/HW4dark" element={<CobSoulMusicDark></CobSoulMusicDark>} />
+
         </Routes>
-      </div>
     </Router>
   );
 }

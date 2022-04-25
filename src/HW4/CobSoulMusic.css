@@ -1,0 +1,266 @@
+.HW4Main-Dark{
+    background-color: #bcfd49;;
+    color:black;
+}
+
+.HW4Main-Header-Bar{
+    color:white;
+    background-color: black;
+    text-align: left;
+}
+
+.HW4Main-Header-Bar {
+    padding: .5em;
+}
+.HW4Main-Header-Bar h4{
+    font-size: 28px;
+
+}
+.HW4Main-Header-Bar h4 div{
+    display: inline;
+    padding-right: .25em;
+}
+.HW4Main-Header-Bar h4 span{
+    padding: .25em;
+    font-size: 12px;
+}
+
+.HW4-Flex{
+    display: flex;
+}
+
+.HW4-FlexRow{
+    flex-direction: row;
+}
+
+.HW4-JustifyContentCenter{
+    justify-content: center;
+}
+
+.HW4-AlignItemsCenter{
+    align-items: center;
+}
+.HW4-SearchMenuContainer > div{
+    margin: 1em;
+}
+.HW4-FavoritesBar{
+    position: fixed;
+    left:82%;
+    z-index: 5;
+}
+.HW4-FloatRight{
+    float:right;
+}
+
+.HW4Main-DarkHeaderContainer{
+    display: flex;
+    justify-content: center
+}
+.HW4Main-Dark-Header{
+    text-align: center;
+    font-size: 50px;
+    color:white;
+}
+
+.HW4-100Width{
+    width: 100%;
+}
+
+.HW4-Margin1{
+    margin: 1em;
+}
+
+.HW4-MusicItemContainerDark{
+    background-color: rgba(137, 43, 226, 0.856);
+
+    width:340px;
+    height:340px;
+    border-radius: .25em;
+    background-image: url("../../public/dance1.png");
+    background-size: contain;
+    background-blend-mode:saturation;
+    background-origin: content-box;
+    background-position: 90%;
+    background-repeat: no-repeat;
+
+}
+.HW4-MusicItemContainerDark-Playing{
+    background-image: url("../../public/airpodsCrackle.gif");
+    background-blend-mode:color-burn;
+    background-size:cover;
+    filter:hue-rotate(90deg);
+    -webkit-filter:hue-rotate(90deg);
+}
+.HW4-Padding-Top-1{
+    padding-top: 1em;
+}
+.HW4Main-Dark-Container{
+    background-image: url("../../public/musicartbg.jpg");
+    background-color: rgba(255, 0, 0, 0.397);
+    background-size: cover;
+    background-blend-mode:difference;
+    background-origin: content-box;
+    background-position: 90%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.HW4Main-Dark-Container--DarkMode{
+    background-image: url("../../public/musicartbg.jpg");
+    background-color: rgba(0, 0, 0,.75);
+    background-size: cover;
+    background-blend-mode:hard-light;
+    background-origin: content-box;
+    background-position: 90%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.HW4Main-Dark-Container-Inner{
+    width: 100%;
+
+    overflow: hidden;
+}
+.HW4-MarginTopBottom1{
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+.HW4-CobSoulMusicSelectionContainer{
+    flex-wrap: wrap;
+}
+.HW4-DarkModeWhite{
+    color:white;
+}
+.HW4-AutoPlayToggleText {
+    font-size: 16px;
+}
+.HW4-JustifyEnd{
+    justify-content: end;
+}
+.HW4-FlexColumn{
+    flex-direction: column;
+}
+.HW4-MusicItemIFrameBlocker{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.HW4-MusicItemIFrameBlockerContainer{
+    position: relative;
+}
+.HW4-MusicPlaying{
+    border: #bcfd49;
+    border-width: 2em;
+}
+.HW4-RGB{
+    animation: rainbowColoranim 1s ease-in infinite forwards;
+}
+.HW4-VideoAdIframe{
+    pointer-events: none;
+}
+.HW4-Bolder{
+    font-weight: bolder;
+}
+.HW4-LowContrast{
+    font-size: smaller;
+    color:lightgray;
+}
+
+.HW4-Hidden{
+    display: none;
+}
+
+.HW4-LowOpacity{
+    opacity: .35;
+}
+.HW4-Fixed{
+    position: fixed;
+}
+.HW4-NowPlayingDarkContainer{
+    background-color: black;
+    color:greenyellow;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    font-size: 20px;
+    z-index: 5;;
+}
+
+.HW4-NowPlayingDescription{
+    color:violet;
+}
+.HW4-JustifySpaceEvenly{
+    justify-content: space-evenly;
+}
+.HW4-MediumSizeAd{
+    width: 350px;
+    margin:.25em;
+    height: max-content;
+    cursor: pointer;;
+}
+.HW4-Comments{
+    margin-bottom: 16em;
+}
+.HW4-CommentsSection{
+    background-color: #f5f5dc4d;
+    padding: 1.5em;
+    border-radius: .25em;
+}
+.HW4-PeppeDance{
+    width: 50px;
+    animation:  duration timing-function delay iteration-count direction fill-mode;
+}
+.HW4-BannerAd{
+    width: 400px;
+    justify-content: center;
+    margin: auto;
+}
+
+.HW4-ReadTermsDark{
+    position: absolute;
+    cursor: pointer;
+    left:66%;
+}
+
+.HW4-AdStatement{
+    font-size: 28px;
+    text-transform: capitalize;
+    margin:.5em;
+    color:red;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    animation: rainbowColorTextOutlineanim 2s linear .1s infinite forwards;
+    cursor: pointer;;
+}
+
+.HW4-MarginLeftRight1{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.HW4-Smaller{
+    font-size: smaller;
+}
+.HW4-Strike{
+    text-decoration: line-through;
+}
+.HW4-Green{
+    color: green;
+}
+.HW4-Red{
+    color:red;
+}
+.HW4-Yellow{
+    color:yellow;
+}
+
+.HW4-Clickable{
+    cursor: pointer;
+    filter:saturate(-10);
+
+}
+
+.HW4-Clickable:hover{
+    cursor: pointer;
+    filter:saturate(20);
+    background-color: rgb(50,50,50);
+}

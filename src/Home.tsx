@@ -44,7 +44,19 @@ class Home extends React.Component {
                             </li>
                             <li>
                                 <a href="/HW3dark">See Dark Version</a>
-                            </li> </ul>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <h4>Homework 4 - Cob's Soul Music</h4>
+                            <li>
+                                <a href="/HW4light">See Light Version</a>
+                            </li>
+                            <li>
+                                <a href="/HW4dark">See Dark Version</a>
+                            </li>
+                        </ul>
+
                     </li>
                 </ul>
             </div>
