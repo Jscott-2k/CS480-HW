@@ -13,15 +13,15 @@ interface CobSoulMusicCommentsLightProps {
 interface CobSoulMusicCommentsLightStates {
 
 }
-export default class CobSoulMusicCommentsDark extends React.Component<CobSoulMusicCommentsLightProps, CobSoulMusicCommentsLightStates>{
+export default class CobSoulMusicCommentsLight extends React.Component<CobSoulMusicCommentsLightProps, CobSoulMusicCommentsLightStates>{
 
     render(): React.ReactNode {
         return (
             <div className='HW4-Flex HW4-JustifySpaceEvenly  HW4-CommentsLight'>
                 <div className='HW4-Flex'>
                 <CobSoulMusicAdsColumnLight ads={[
-                    "ad2.png", "ad3.jpg",
-                ]}></CobSoulMusicAdsColumnLight>
+                    "ad2.png", "ad3.jpg"
+                ]}></CobSoulMusicAdsColumnLight> 
 
                 </div>
                 <div className='HW4-CommentsSectionLight'>
@@ -42,6 +42,6 @@ export default class CobSoulMusicCommentsDark extends React.Component<CobSoulMus
                     "ad1.png"
                 ]}></CobSoulMusicAdsColumnLight>
                 </div>
-                </div>);
+        </div>);
     }
 }
