@@ -20,7 +20,7 @@ export default class CobSoulMusicCommentsDark extends React.Component<CobSoulMus
             <div className='HW4-Flex HW4-JustifySpaceEvenly  HW4-CommentsLight'>
                 <div className='HW4-Flex'>
                 <CobSoulMusicAdsColumnLight ads={[
-                    "fakedownload1.png", "ad2.png", "ad3.jpg", "fakedownload2.png"
+                    "ad2.png", "ad3.jpg",
                 ]}></CobSoulMusicAdsColumnLight>
 
                 </div>

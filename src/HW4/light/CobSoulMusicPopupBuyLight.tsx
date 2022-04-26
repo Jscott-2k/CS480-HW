@@ -82,8 +82,6 @@ export default class CobSoulMusicPopupBuyLight extends React.Component<CobSoulMu
                             <Form.Group>
                                 <Form.Input placeholder="Date of Birth">
                                 </Form.Input>
-                                <Form.Input placeholder="Social Security #">
-                                </Form.Input>
                             </Form.Group>
                             <Form.Input placeholder="Card Number (####-####-####-####)">
 
